@@ -8,7 +8,15 @@ import java.io.Serializable;
 @Named
 public class EstudanteRegistrarBean implements Serializable {
     private Estudante estudante = new Estudante();
-    private 
+    private String[] nomesArray = {"DevDojo", "eh", "foda"};
+
+    public String[] getNomesArray() {
+        return nomesArray;
+    }
+
+    public void setNomesArray(String[] nomesArray) {
+        this.nomesArray = nomesArray;
+    }
 
     public Estudante getEstudante() {
         return estudante;
