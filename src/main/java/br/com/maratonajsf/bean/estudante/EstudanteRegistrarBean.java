@@ -2,6 +2,8 @@ package br.com.maratonajsf.bean.estudante;
 
 import br.com.maratonajsf.model.Estudante;
 
+import javax.el.LambdaExpression;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -63,11 +65,13 @@ public class EstudanteRegistrarBean implements Serializable {
     public void esconderLink(){
         this.mostrarLink = false;
     }
-
     public boolean isMostrarLink() {
         return mostrarLink;
     }
-
+    public void calcularCubo(LambdaExpression le, long value){
+         long result = (long)le.invoke(FacesContext.getCurrentInstance().getELContext(), value);
+        System.out.println(result);
+    }
     public void setMostrarLink(boolean mostrarLink) {
         this.mostrarLink = mostrarLink;
     }
