@@ -13,10 +13,13 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>view.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
         <param-value>true</param-value>
     </context-param>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

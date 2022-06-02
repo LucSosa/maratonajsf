@@ -5,8 +5,10 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="UHUUU CHEGAMOS"/><br/>
-    <h:outputText value="#{testeRequestBean.personagemSelecionado}"/>
-</f:view>
+<h:head>
+    <h:body>
+        <h:outputLabel value="Pegando o valor do Session Bean"/><br/>
+        <h:outputText value="#{testeSessionBean.personagemSelecionado}"/>
+    </h:body>
+</h:head>
 </html>
