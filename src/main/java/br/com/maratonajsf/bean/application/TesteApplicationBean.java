@@ -12,14 +12,17 @@ import static java.util.Arrays.asList;
 @ApplicationScoped
 public class TesteApplicationBean implements Serializable {
     private List<String> categoriaList;
+
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("Entrou no PostConstruct do ApplicationScoped");
         categoriaList = asList("RPG", "SCI-FI", "HORROR");
     }
-    public void mudarLista(){
-        categoriaList= asList("RPG", "SCI-FI", "HORROR", "COMEDY");
+
+    public void mudarLista() {
+        categoriaList = asList("RPG", "SCI-FI", "HORROR", "COMEDY");
     }
+
     public List<String> getCategoriaList() {
         return categoriaList;
     }

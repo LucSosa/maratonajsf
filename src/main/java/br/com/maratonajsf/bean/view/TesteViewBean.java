@@ -15,14 +15,15 @@ import static java.util.Arrays.asList;
 @ViewScoped
 public class TesteViewBean implements Serializable {
     private List<String> personagens;
-    private List<String> personagemSelecionado= new ArrayList<>();
+    private List<String> personagemSelecionado = new ArrayList<>();
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println(" Entrou no PostConstruct do ViewScoped ");
         personagens = asList("Naruto", "Sasuke", "Sakura");
     }
-    public void selecionarPersonagem(){
+
+    public void selecionarPersonagem() {
         int index = ThreadLocalRandom.current().nextInt(3);
         String personagem = personagens.get(index);
         personagemSelecionado.add(personagem);
