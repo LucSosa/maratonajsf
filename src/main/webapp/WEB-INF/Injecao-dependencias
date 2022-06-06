@@ -1,0 +1,19 @@
+Funcionamento da Injeção de dependências
+@RequestScoped
+	- ApplicationScoped
+	- RequesScoped
+	- RequestScoped
+	- Dependent
+
+@ViewScoped
+	- ApplicationScoped
+	- SessionScoped
+	- Dependent
+
+@SessionScoped
+	- ApplicationScoped
+	- SessionScoped
+	- Dependent
+
+@ApplicationScoped
+	- Dependent

@@ -13,7 +13,7 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>inicioflow.xhtml</welcome-file>
+        <welcome-file>dependent.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
