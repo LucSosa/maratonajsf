@@ -10,17 +10,14 @@ import java.io.Serializable;
 @Named
 @ViewScoped
 public class ComunicacaoTeste5Bean implements Serializable {
-    private String buttonName = "Nome do botão do Bean";
+    private String nome;
+    private String sobrenome;
     private Estudante estudante = new Estudante();
-    public void execute(ActionEvent event){
-        String nome = (String) event.getComponent().getAttributes().get("nome");
-        String adjetivo = (String) event.getComponent().getAttributes().get("adjetivo");
-        Estudante estudante = (Estudante) event.getComponent().getAttributes().get("estudante");
-        String test = (String) event.getComponent().getAttributes().get("test");
-        System.out.println (nome);
-        System.out.println(adjetivo);
-        System.out.println(estudante.getTurno());
-        System.out.println(test);
+    private Estudante estudante2;
+    public void execute(){
+        System.out.println("Dentro do execute " + nome);
+        System.out.println("Dentro do execute " + sobrenome);
+        System.out.println("Dentro do execute " + estudante2.getNota1());
     }
 
     public Estudante getEstudante() {
@@ -31,11 +28,29 @@ public class ComunicacaoTeste5Bean implements Serializable {
         this.estudante = estudante;
     }
 
-    public String getButtonName() {
-        return buttonName;
+    public Estudante getEstudante2() {
+        return estudante2;
     }
 
-    public void setButtonName(String buttonName) {
-        this.buttonName = buttonName;
+    public void setEstudante2(Estudante estudante2) {
+        this.estudante2 = estudante2;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        System.out.println("Venho do setPropertyActionListener " + nome);
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        System.out.println("Venho do setPropertyActionListener " + sobrenome);
+        this.sobrenome = sobrenome;
     }
 }
