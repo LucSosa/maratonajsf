@@ -6,34 +6,35 @@
       xmlns:f="http://java.sun.com/jsf/core"
 >
 <h:head>
-    <h:body>
-        <h:form>
-            <h:panelGrid columns="1">
-                <h:outputText value="#{facesContext.externalContext.getInitParameter('images.location')}"/>
-                <h:commandButton value="Imprimir" actionListener="#{comunicacaoTeste1Bean.imprimirAtributos()}"/>
-            </h:panelGrid>
-        </h:form>
-        <h:form>
-            <h:panelGrid columns="1">
-                <h:inputText value="#{comunicacaoTeste1Bean.nome}"/>
-                <h:inputText value="#{comunicacaoTeste1Bean.sobrenome}"/>
-                <h:commandButton value="Salvar" action="#{comunicacaoTeste1Bean.save()}"/>
-            </h:panelGrid>
-        </h:form>
-        <h:form>
-            <h:panelGrid columns="1">
-                <h:inputText value="#{comunicacaoTeste1Bean.nome}"/>
-                <h:inputText value="#{comunicacaoTeste1Bean.sobrenome}"/>
-                <h:button value="Página 2" action="comunicacao2?faces-redirect=true">
-                    <f:param name="nome" value="DevDojo"/>
-                    <f:param name="sobrenome" value="Ninjas"/>
-                </h:button>
-                <h:link value="Vai para comunicação 2" outcome="comunicacao2">
-                    <f:param name="nome" value="DevDojo"/>
-                    <f:param name="sobrenome" value="Ninjas"/>
-                </h:link>
-            </h:panelGrid>
-        </h:form>
-    </h:body>
+
 </h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="1">
+            <h:outputText value="#{facesContext.externalContext.getInitParameter('images.location')}"/>
+            <h:commandButton value="Imprimir" actionListener="#{comunicacaoTeste1Bean.imprimirAtributos()}"/>
+        </h:panelGrid>
+    </h:form>
+    <h:form>
+        <h:panelGrid columns="1">
+            <h:inputText value="#{comunicacaoTeste1Bean.nome}"/>
+            <h:inputText value="#{comunicacaoTeste1Bean.sobrenome}"/>
+            <h:commandButton value="Salvar" action="#{comunicacaoTeste1Bean.save()}"/>
+        </h:panelGrid>
+    </h:form>
+    <h:form>
+        <h:panelGrid columns="1">
+            <h:inputText value="#{comunicacaoTeste1Bean.nome}"/>
+            <h:inputText value="#{comunicacaoTeste1Bean.sobrenome}"/>
+            <h:button value="Página 2" action="comunicacao2?faces-redirect=true">
+                <f:param name="nome" value="DevDojo"/>
+                <f:param name="sobrenome" value="Ninjas"/>
+            </h:button>
+            <h:link value="Vai para comunicação 2" outcome="comunicacao2">
+                <f:param name="nome" value="DevDojo"/>
+                <f:param name="sobrenome" value="Ninjas"/>
+            </h:link>
+        </h:panelGrid>
+    </h:form>
+</h:body>
 </html>

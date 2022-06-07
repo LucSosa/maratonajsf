@@ -6,18 +6,19 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-<f:view>
-    <h:body>
-        <h:form>
-            <p:messages autoUpdate="true"/>
-            <h2>Validando dados do usuario</h2>
-            <h:panelGrid columns="2">
-                <h:outputLabel value="#{testeFlowNestedBuilderBean.userName}"/>
-                <h:outputLabel value="#{testeFlowNestedBuilderBean.userSurname}"/>
-                <h:commandButton value="Validar Usuario" action="#{testeFlowNestedBuilderBean.validarUser()}"/>
-                <h:commandButton value="Voltar Inicio" action="exitToNewInicio"/>
-            </h:panelGrid>
-        </h:form>
-    </h:body>
-</f:view>
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form>
+        <p:messages autoUpdate="true"/>
+        <h2>Validando dados do usuario</h2>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="#{testeFlowNestedBuilderBean.userName}"/>
+            <h:outputLabel value="#{testeFlowNestedBuilderBean.userSurname}"/>
+            <h:commandButton value="Validar Usuario" action="#{testeFlowNestedBuilderBean.validarUser()}"/>
+            <h:commandButton value="Voltar Inicio" action="exitToNewInicio"/>
+        </h:panelGrid>
+    </h:form>
+</h:body>
 </html>
