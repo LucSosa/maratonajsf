@@ -2,6 +2,7 @@ package br.com.maratonajsf.model;
 
 import br.com.maratonajsf.model.enums.Turno;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -24,9 +25,9 @@ public class Estudante {
     }
 
     public static List<Estudante> estudanteList() {
-        return asList(  new Estudante("Ikki", "Fenix", 10),
-                        new Estudante("Shiryu", "Dragão", 10),
-                        new Estudante("Seiya", "Pegasus", 10));
+        return new ArrayList<>(asList(new Estudante("Ikki", "Fenix", 10),
+                new Estudante("Shiryu", "Dragão", 10),
+                new Estudante("Seiya", "Pegasus", 10)));
     }
 
     public Turno getTurno() {
