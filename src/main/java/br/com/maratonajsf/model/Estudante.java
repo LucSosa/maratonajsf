@@ -14,6 +14,7 @@ public class Estudante {
     private double nota2;
     private double nota3 = 10;
     private Turno turno = Turno.MATUTINO;
+    private String email;
 
     public Estudante() {
     }
@@ -28,6 +29,14 @@ public class Estudante {
         return new ArrayList<>(asList(new Estudante("Ikki", "Fenix", 10),
                 new Estudante("Shiryu", "Dragão", 10),
                 new Estudante("Seiya", "Pegasus", 10)));
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Turno getTurno() {
