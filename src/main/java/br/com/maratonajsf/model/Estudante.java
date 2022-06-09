@@ -2,12 +2,14 @@ package br.com.maratonajsf.model;
 
 import br.com.maratonajsf.model.enums.Turno;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class Estudante {
+public class Estudante implements Serializable {
+    private Integer id;
     private String nome = "Lucas";
     private String sobrenome = "Sosa";
     private double nota1 = 20;
@@ -25,10 +27,40 @@ public class Estudante {
         this.nota1 = nota1;
     }
 
+    public Estudante(Integer id, String nome, String sobrenome, double nota1) {
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.nota1 = nota1;
+    }
+
     public static List<Estudante> estudanteList() {
-        return new ArrayList<>(asList(new Estudante("Ikki", "Fenix", 10),
-                new Estudante("Shiryu", "Dragão", 10),
-                new Estudante("Seiya", "Pegasus", 10)));
+        return new ArrayList<>(asList(new Estudante(1, "Ikki", "Fenix", 10),
+                new Estudante(2, "Shiryu", "Dragão", 10),
+                new Estudante(3, "Seiya", "Pegasus", 10)));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Estudante estudante = (Estudante) o;
+
+        return id != null ? id.equals(estudante.id) : estudante.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getEmail() {
