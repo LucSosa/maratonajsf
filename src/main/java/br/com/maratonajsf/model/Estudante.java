@@ -2,6 +2,7 @@ package br.com.maratonajsf.model;
 
 import br.com.maratonajsf.model.enums.Turno;
 
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,8 @@ public class Estudante implements Serializable {
     private double nota3 = 10;
     private Turno turno = Turno.MATUTINO;
     private String email;
+    @Transient
+    private transient boolean editing;
 
     public Estudante() {
     }
@@ -37,6 +40,7 @@ public class Estudante implements Serializable {
     public static List<Estudante> estudanteList() {
         return new ArrayList<>(asList(new Estudante(1, "Ikki", "Fenix", 10),
                 new Estudante(2, "Shiryu", "Dragão", 10),
+                new Estudante(2, "Shiryu", "Dragão", 10),
                 new Estudante(3, "Seiya", "Pegasus", 10)));
     }
 
@@ -53,6 +57,14 @@ public class Estudante implements Serializable {
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+
+    public boolean isEditing() {
+        return editing;
+    }
+
+    public void setEditing(boolean editing) {
+        this.editing = editing;
     }
 
     public Integer getId() {
@@ -117,5 +129,15 @@ public class Estudante implements Serializable {
 
     public void setNota3(double nota3) {
         this.nota3 = nota3;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudante{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", turno=" + turno +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
