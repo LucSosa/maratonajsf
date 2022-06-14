@@ -1,4 +1,4 @@
-package br.com.maratonajsf.validators;
+package br.com.maratonajsf.bean.ajax.validators;
 
 import br.com.maratonajsf.bean.login.LoginBean;
 
