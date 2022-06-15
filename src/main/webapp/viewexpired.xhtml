@@ -5,12 +5,18 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head></h:head>
+<h:head>
+    <h:outputStylesheet name="1_1/default/css/style.css"/>
+    <h:outputScript name="1_1/default/js/main.js"/>
+    <!-- [localePrefix/][libraryName/][libraryVersion/]resourceName[/resourseVersion] -->
+    <!-- \d+(_\d+)* 1_0, 1_1, 1_2, 1_2_1 -->
+</h:head>
 <h:body>
     <h:form id="form">
         <h:panelGrid columns="1">
             <h:inputText value="#{viewExpiredTesteBean.nome}"/>
-            <h:commandButton value="Save" action="#{viewExpiredTesteBean.save()}"/>
+            <h:commandButton value="Save" action="#{viewExpiredTesteBean.save()}" styleClass="btn"/>
+            <h:graphicImage name="1_1/default/images/java.png"/>
             <h:commandButton value="Invalidar Sessão" action="#{viewExpiredTesteBean.invalidateSession()}"/>
         </h:panelGrid>
     </h:form>
