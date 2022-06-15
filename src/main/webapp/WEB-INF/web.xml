@@ -13,7 +13,7 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>upload.xhtml</welcome-file>
+        <welcome-file>viewexpired.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
@@ -46,6 +46,23 @@
         <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
         <param-value>client</param-value>
     </context-param>
+    <context-param>
+        <param-name>com.sun.faces.enableRestoreView11Compatibility</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <error-page>
+        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+        <location>/expirederror.xhtml</location>
+    </error-page>
+<!--    <context-param>-->
+<!--        <param-name>com.sun.faces.numberOfLogicalViews</param-name>-->
+<!--        <param-value>2</param-value>-->
+<!--        Por padrão são 15 views -->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>com.sun.faces.numberOfViewsInSession</param-name>-->
+<!--        <param-value>4</param-value>-->
+<!--    </context-param>-->
 <!--    <context-param>-->
 <!--        <param-name>javax.faces.PARTIAL_STATE_SAVING</param-name>-->
 <!--        <param-value>false</param-value>-->
